@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://ai-muzic.github.io/museformer/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="generator" content="Hugo 0.66.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./Files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./Files/github.min.css">
+  <link rel="stylesheet" href="./Files/normalize.css">
+  <link rel="stylesheet" href="./Files/skeleton.css">
+  <link rel="stylesheet" href="./Files/custom.css">
+  <title>EMOGEN</title>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+
+  <div class="container">
+
+    <header role="banner">
+    
+    </header>
+
+
+    <main role="main">
+      <article itemscope="" itemtype="https://schema.org/BlogPosting">
+        <h1 class="entry-title" itemprop="headline">EmoGen: Eliminating Subjective Bias in Emotional Music Generation</h1>
+    
+      <h2 id="samples">1. EmoGen Samples</h2>
+      <p> We determine the designed attributes and the mapped attribute values in the emotion-to-attribute mapping stage from EMOPIA. Then in attribute-to-music generation stage, we train the generative model on three different settings: 1) Pre-training on Pop1k7 and LMD-Piano, fine-tuning on EMOPIA; 2) Training on Pop1k7, LMD-Piano and EMOPIA; 3) Training on TopMAGD. Please refer to the paper form more details. We generate the corresponding samples for the four quadrants of Russell's 4Q model (as shown below). "Qi" represents the <i>i</i>-th quadrant.
+      <div style="text-align:center"><img src="./figures/Valence_arousal.png" width=500 height=500>  
+      <p> Figure.1 Russell's 4Q model(<a href="https://psu.pb.unizin.org/psych425/chapter/circumplex-models/">https://psu.pb.unizin.org/psych425/chapter/circumplex-models/</a>). According to the valence (x-axis) and arousal (y-axis), human emotions can be divided into four quadrants. </p>  </div>
+
+
+​      
+    <h3> Pre-training on Pop1k7 and LMD-Piano, fine-tuning on EMOPIA </h3>
+          <h4> Q1 </h4>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/3.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/18.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/33.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q2 </h4>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/1/12.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/1/13.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/1/43.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q3 </h4>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/2/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/2/8.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/2/39.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q4 </h4>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/3/11.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/3/18.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/3/20.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+      <h3> Training on Pop1k7 and LMD-Piano and EMOPIA </h3>
+          <h4> Q1 </h4>
+          <audio controls="controls">
+          <source src="./audio/Piano/0/21.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/0/29.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/0/50.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q2 </h4>
+          <audio controls="controls">
+          <source src="./audio/Piano/1/56.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/1/59.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/1/105.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q3 </h4>
+          <audio controls="controls">
+          <source src="./audio/Piano/2/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/2/23.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/2/29.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+          <h4> Q4 </h4>
+          <audio controls="controls">
+          <source src="./audio/Piano/3/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/3/9.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/3/10.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          
+      <h3> Training on TopMAGD </h3>
+          <h4> Q1 </h4>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/0/49.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/0/210.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/0/235.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <h4> Q2 </h4>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/1/24.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/1/32.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/1/74.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <h4> Q3 </h4>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/2/157.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/2/178.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/2/254.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <h4> Q4 </h4>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/3/89.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/3/241.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/TopMAGD/3/404.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+
+<style>
+  table,
+  td,
+  th {
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: collapse;
+  }
+   table td {
+    padding: 10px 30px;
+  }
+</style>
+<h2> 2. Subjective Bias in Ground Truth  </h2>
+
+We  select center and boundary pieces from EMOPIA, as shown below.   
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Center</th>
+      <th>Boundary</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center;">Q1</td>
+          <td>
+              <audio controls="controls">
+          <source src="./audio/EMOPIA/center/Q1_8rupdevqfuI_0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> 
+            </td>
+          <td><audio controls="controls">
+          <source src="./audio/EMOPIA/boundary/Q1_5NW0zDu6IYM_2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> </td>
+      </tr>
+      <tr>
+          <td style="text-align: center;">Q2</td>
+          <td>
+              <audio controls="controls">
+          <source src="./audio/EMOPIA/center/Q2_0J7lX-Tcx-w_0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> 
+            </td>
+          <td><audio controls="controls">
+          <source src="./audio/EMOPIA/boundary/Q2_1EDThWjNxOI_0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> </td>
+      </tr>
+      <tr>
+          <td style="text-align: center;">Q3</td>
+          <td>
+              <audio controls="controls">
+          <source src="./audio/EMOPIA/center/Q3_0EWWyyV7RJA_0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> 
+            </td>
+          <td><audio controls="controls">
+          <source src="./audio/EMOPIA/boundary/Q3_ldCQ6N9G6Mk_4.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> </td>
+      </tr>
+      <tr>
+          <td style="text-align: center;">Q4</td>
+          <td>
+              <audio controls="controls">
+          <source src="./audio/EMOPIA/center/Q4_-_FjI4bT2Wo_2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> 
+            </td>
+          <td><audio controls="controls">
+          <source src="./audio/EMOPIA/boundary/Q4_8TYY0qG-KOw_0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> </td>
+      </tr>
+   </tbody>
+    <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+
+<p> Compared with the pieces from the center, the emotion of the boundary pieces is more ambiguous although their labels are the same. </p>
+
+<h2>3. Baseline Samples  </h2>
+<p> We compare EmoGen with Conditional Sampling (CS, <a href="https://arxiv.org/abs/2108.01374" target="_blank"> paper </a>) and Predictor Upper
+Confidence for Trees (PUCT, <a href="https://ojs.aaai.org/index.php/AIIDE/article/view/21960" target="_blank"> paper </a>) on Setting 1), namely pre-traning on Pop1k7 and LMD-Piano then fine-tuning on EMOPIA. Here are the samples from the above two methods.</p>
+
+
+ <h3> CS </h3>
+      <h4> Q1 </h4>
+      <audio controls="controls">
+      <source src="./audio/CS/0/0.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/0/6.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/0/12.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q2 </h4>
+      <audio controls="controls">
+      <source src="./audio/CS/1/114.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/1/189.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/1/240.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q3 </h4>
+      <audio controls="controls">
+      <source src="./audio/CS/2/30.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/2/77.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/2/114.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q4 </h4>
+      <audio controls="controls">
+      <source src="./audio/CS/3/30.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/3/70.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/CS/3/239.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+
+
+ <h3> PUCT </h3>
+      <h4> Q1 </h4>
+      <audio controls="controls">
+      <source src="./audio/PUCT/0/Q1_0_d0_p1.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/0/Q1_6_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/0/Q1_9_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q2 </h4>
+      <audio controls="controls">
+      <source src="./audio/PUCT/1/Q2_0_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/1/Q2_7_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/1/Q2_15_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q3 </h4>
+      <audio controls="controls">
+      <source src="./audio/PUCT/2/Q3_0_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/2/Q3_2_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/2/Q3_3_d0_p3.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <h4> Q4 </h4>
+      <audio controls="controls">
+      <source src="./audio/PUCT/3/Q4_0_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/3/Q4_5_d0_p3.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+      <audio controls="controls">
+      <source src="./audio/PUCT/3/Q4_18_d0_p1.mp3" autoplay="">Your browser does not support the audio element.
+      </audio>
+<p></p> 
+<br>
+Due to subjective bias, the emotional controllability of CS and PUCT is not accurate enough compared with EmoGen. 
+<h2>4. Selected Attribute List</h2>
+<p> The selected 100 attributes are shown in the following table. For the specific meaning of these attributes, please refer to <a href="https://jmir.sourceforge.net/manuals/jSymbolic_manual/home.html" target="_blank"> jSymbolic Feature Explanations</a>. </p>
+
+
+
+<table border="1" cellspacing="0">
+  <tbody>
+    <tr>
+ <td>Note Density per Quarter Note</td>
+ <td>Note Density per Quarter Note Variability</td>
+ <td>Total Number of Notes</td>
+ <td>Relative Note Density of Highest Line</td>
+ <td>Prevalence of Long Rhythmic Values</td>
+</tr>
+<tr>
+ <td>Prevalence of Very Long Rhythmic Values</td>
+ <td>Average Note to Note Change in Dynamics</td>
+ <td>Pitch Class Histogram_8</td>
+ <td>Rhythmic Value Histogram_10</td>
+ <td>Vertical Interval Histogram_43</td>
+</tr>
+<tr>
+ <td>Variability of Time Between Attacks</td>
+ <td>Pitch Class Histogram_9</td>
+ <td>Rhythmic Value Variability</td>
+ <td>Pitch Variability</td>
+ <td>Variability of Rhythmic Value Offsets</td>
+</tr>
+<tr>
+ <td>Vertical Interval Histogram_48</td>
+ <td>Rhythmic Value Histogram_2</td>
+ <td>Prevalence of Short Rhythmic Values</td>
+ <td>Rhythmic Value Histogram_1</td>
+ <td>Chord Duration</td>
+</tr>
+<tr>
+ <td>Vertical Interval Histogram_36</td>
+ <td>Pitch Class Histogram_3</td>
+ <td>Minor Major Triad Ratio</td>
+ <td>Rhythmic Value Histogram_9</td>
+ <td>Variation of Dynamics</td>
+</tr>
+<tr>
+ <td>Vertical Interval Histogram_9</td>
+ <td>Rhythmic Looseness - Tempo Standardized</td>
+ <td>Vertical Interval Histogram_16</td>
+ <td>Vertical Interval Histogram_39</td>
+ <td>Range</td>
+</tr>
+<tr>
+ <td>Pitch Class Histogram_4</td>
+ <td>Chord Type Histogram_2</td>
+ <td>Vertical Interval Histogram_31</td>
+ <td>Chord Type Histogram_1</td>
+ <td>Rhythmic Value Histogram_6</td>
+</tr>
+<tr>
+ <td>Wrapped Vertical Interval Histogram_0</td>
+ <td>Pitch Skewness</td>
+ <td>Importance of High Register</td>
+ <td>Rhythmic Value Histogram_3</td>
+ <td>Vertical Interval Histogram_13</td>
+</tr>
+<tr>
+ <td>Number of Pitches</td>
+ <td>Strength of Strongest Rhythmic Pulse - Tempo Standardized</td>
+ <td>Vertical Interval Histogram_1</td>
+ <td>Rhythmic Value Variability in Run Lengths Histogram_2</td>
+ <td>Melodic Embellishments</td>
+</tr>
+<tr>
+ <td>Rhythmic Value Kurtosis</td>
+ <td>Strength of Second Strongest Rhythmic Pulse - Tempo Standardized</td>
+ <td>Vertical Interval Histogram_7</td>
+ <td>Rhythmic Value Variability in Run Lengths Histogram_1</td>
+ <td>Melodic Interval Histogram_48</td>
+</tr>
+<tr>
+ <td>Chord Type Histogram_6</td>
+ <td>Rhythmic Value Histogram_11</td>
+ <td>Mean Rhythmic Value Run Length</td>
+ <td>Most Common Pitch</td>
+ <td>Melodic Interval Histogram_36</td>
+</tr>
+<tr>
+ <td>Rhythmic Value Histogram_4</td>
+ <td>Variability in Rhythmic Value Run Lengths</td>
+ <td>Importance of Bass Register</td>
+ <td>Prevalence of Medium Rhythmic Values</td>
+ <td>Seventh Chords</td>
+</tr>
+<tr>
+ <td>Duration in Seconds</td>
+ <td>Rhythmic Value Histogram_8</td>
+ <td>Melodic Interval Histogram_2</td>
+ <td>Prevalence of Very Short Rhythmic Values</td>
+ <td>Pitch Class Histogram_2</td>
+</tr>
+<tr>
+ <td>Harmonicity of Two Strongest Rhythmic Pulses - Tempo Standardized</td>
+ <td>Mean Pitch</td>
+ <td>Most Common Rhythmic Value</td>
+ <td>Prevalence of Most Common Rhythmic Value</td>
+ <td>Contrary Motion</td>
+</tr>
+<tr>
+ <td>Vertical Interval Histogram_38</td>
+ <td>Rhythmic Value Histogram_7</td>
+ <td>Vertical Interval Histogram_44</td>
+ <td>Average Length of Melodic Arcs</td>
+ <td>Rhythmic Value Variability in Run Lengths Histogram_6</td>
+</tr>
+<tr>
+ <td>Melodic Interval Histogram_16</td>
+ <td>Melodic Pitch Variety</td>
+ <td>Average Number of Simultaneous Pitches</td>
+ <td>Number of Relatively Strong Rhythmic Pulses - Tempo Standardized</td>
+ <td>Importance of Middle Register</td>
+</tr>
+<tr>
+ <td>Melodic Interval Histogram_0</td>
+ <td>Vertical Interval Histogram_40</td>
+ <td>Prevalence of Most Common Melodic Interval</td>
+ <td>Beat Histogram Tempo Standardized_32</td>
+ <td>Melodic Interval Histogram_12</td>
+</tr>
+<tr>
+ <td>Pitch Class Histogram_5</td>
+ <td>Melodic Interval Histogram_43</td>
+ <td>Wrapped Vertical Interval Histogram_9</td>
+ <td>Prevalence of Most Common Vertical Interval</td>
+ <td>Rhythmic Value Histogram_5</td>
+</tr>
+<tr>
+ <td>Vertical Interval Histogram_34</td>
+ <td>Vertical Interval Histogram_22</td>
+ <td>Amount of Arpeggiation</td>
+ <td>Vertical Interval Histogram_51</td>
+ <td>Perfect Vertical Intervals</td>
+</tr>
+<tr>
+ <td>Vertical Dissonance Ratio</td>
+ <td>Mean Pitch Class</td>
+ <td>Rhythmic Value Median Run Lengths Histogram_10</td>
+ <td>Melodic Sixths</td>
+ <td>Melodic Interval Histogram_4</td>
+</tr>
+ </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+
+ 
+
+
+
+  </div>
+
+  <script async="" src="./Files/analytics.js.下载"></script><script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-139981676-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="./Files/highlight.min.js.下载"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+  <script type="text/x-mathjax-config;executed=true">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+  <script type="text/x-mathjax-config;executed=true">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+  <script type="text/javascript" async="" src="./Files/MathJax.js.下载">
+    </script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
