@@ -1,0 +1,302 @@
+<table border="1" cellspacing="0">
+  <tbody>
+  <tr>
+      <th>Emotion</th>
+      <th>Method</th>
+      <th>Audio</th>
+      <th>Description</th>
+  </tr>
+  <tr>
+     <td rowspan="4">Q1</td>
+     <td>EmoGen (Setting 1)</td>
+     <td>
+       	  <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/3.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> <br>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/27.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> <br>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/0/33.mp3" autoplay="">Your browser does not support the audio element.
+          </audio></td>
+     <td>
+     	<p style="text-align:left;">These music clips sound bright and fast, with a sense of power. Therefore, they belong to Q1. </p>
+     </td>
+  </tr>
+  <tr>
+     <td>CS (Setting 1)</td>
+     <td> 
+     	<audio controls="controls">
+        <source src="./audio/CS/0/0.mp3" autoplay="">Your browser does not support the audio element.
+        </audio> <br>
+        <audio controls="controls">
+        <source src="./audio/CS/0/6.mp3" autoplay="">Your browser does not support the audio element.
+        </audio> <br>
+        <audio controls="controls">
+        <source src="./audio/CS/0/12.mp3" autoplay="">Your browser does not support the audio element.
+        </audio> 
+     </td>
+     <td style="text-align:left;">
+     	The tempo of these music pieces is relatively fast and the second and the third piece sound depressed. Therefore, the second and third piece belong to the boundary of Q1 and Q2.
+     </td>
+  </tr>
+  <tr>
+     <td>PUCT (Setting 1)</td>
+     <td>
+     	<audio controls="controls">
+        <source src="./audio/PUCT/0/Q1_20_d0_p1.mp3" autoplay="">Your browser does not support the audio element.
+        </audio><br>
+        <audio controls="controls">
+        <source src="./audio/PUCT/0/Q1_6_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+        </audio><br>
+        <audio controls="controls">
+        <source src="./audio/PUCT/0/Q1_9_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+        </audio>
+     </td>
+     <td>
+     <p style="text-align:left;"> These pieces of music sound calm and slow. Therefore, they belong to the boundray of Q1 and Q4. </p>
+     </td>
+  </tr>
+  <tr>
+     <td>EmoGen (Setting 2)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Piano/0/21.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> <br>
+          <audio controls="controls">
+          <source src="./audio/Piano/0/29.mp3" autoplay="">Your browser does not support the audio element.
+          </audio> <br>
+          <audio controls="controls">
+          <source src="./audio/Piano/0/50.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td style="text-align:left;">
+     These music pieces sound bright and relatively fast. Therefore they belong to Q1.
+     
+     </td>
+  </tr>
+  
+  
+  
+  <tr>
+     <td rowspan="4">Q2</td>
+     <td>EmoGen (Setting 1)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Pt+Ft/1/12.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/1/13.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/1/35.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+       	  
+     <td>
+      These music pieces sound solemn, dark and powerful. Therefore, they belong to Q2.
+     </td>
+  </tr>
+  <tr>
+     <td>CS (Setting 1)</td>
+     <td> 
+     	<audio controls="controls">
+          <source src="./audio/CS/1/114.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/1/189.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/1/240.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     These music pieces sound powerful. The first and third piece belong to Q2, but the second piece is relatively bright and belongs to the boundary of Q1 and Q2.
+     </td>
+  </tr>
+  <tr>
+     <td>PUCT (Setting 1)</td>
+     <td>
+          <audio controls="controls">
+          <source src="./audio/PUCT/1/Q2_0_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/1/Q2_7_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/1/Q2_15_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     The tempo of these music clips is slow. The second one sounds bright while the others sound heavy. Therefore, they belong to the boundary of Q1 and Q2, Q2 and Q3 respectively.
+     </td>
+  </tr>
+  <tr>
+     <td>EmoGen (Setting 2)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Piano/1/56.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/1/59.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/1/105.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     These music clips sound tense and heavy, so they belong to Q2.
+     </td>
+  </tr>
+  
+  
+  <tr>
+     <td rowspan="4">Q3</td>
+     <td>EmoGen (Setting 1)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Pt+Ft/2/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/2/8.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/2/39.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     These music clips are slow and sound relatively subdued and sad. Therefore, they belong to Q3.
+     
+     </td>
+  </tr>
+  <tr>
+     <td>CS (Setting 1)</td>
+     <td> 
+     	  <audio controls="controls">
+          <source src="./audio/CS/2/30.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/2/77.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/2/114.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     	These music pieces sound relatively calm or relaxed (especially the first one), so they belong to the boundary of Q3 and Q4.
+     </td>
+  </tr>
+  <tr>
+     <td>PUCT (Setting 1)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/PUCT/2/Q3_0_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/2/Q3_2_d0_p2.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/2/Q3_3_d0_p3.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     	The first and second piece sound fast and relatively bright, so they do not belong to Q3. The third piece sounds relatively calm, which belongs to the boundary of Q3 and Q4.
+     </td>
+  </tr>
+  <tr>
+     <td>EmoGen (Setting 2)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Piano/2/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/2/23.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/2/29.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     The music pieces sounds slow and depressing. Therefore, they belong to Q3.
+     </td>
+  </tr>
+  
+  
+  <tr>
+     <td rowspan="4">Q4</td>
+     <td>EmoGen (Setting 1)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Pt+Ft/3/11.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/3/18.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Pt+Ft/3/20.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     	The tempo of these pieces is slow. And they sound bright and relaxed, so they belong to Q4.
+     </td>
+  </tr>
+  <tr>
+     <td>CS (Setting 1)</td>
+     <td> 
+     	<audio controls="controls">
+          <source src="./audio/CS/3/30.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/3/70.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/CS/3/239.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     	The first piece sounds slow and calm, belonging to Q4. The second and third pieces sound bright, but tempo is relatively fast, so they belong to the boundary of Q1 and Q4.
+     </td>
+  </tr>
+  <tr>
+     <td>PUCT (Setting 1)</td>
+     <td>
+          <audio controls="controls">
+          <source src="./audio/PUCT/3/Q4_0_d0_p0.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/3/Q4_5_d0_p3.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/PUCT/3/Q4_18_d0_p1.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+     The first and second pieces sound slow and calm, belonging to Q4. The third piece is relatively fast and belongs to the boundary between Q1 and Q4.
+     </td>
+  </tr>
+  <tr>
+     <td>EmoGen (Setting 2)</td>
+     <td>
+     	<audio controls="controls">
+          <source src="./audio/Piano/3/7.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/3/9.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+          <audio controls="controls">
+          <source src="./audio/Piano/3/10.mp3" autoplay="">Your browser does not support the audio element.
+          </audio>
+     </td>
+     <td>
+    	There music pieces sound calm and serene so they belong to Q4.
+     </td>
+  </tr>
+  
+ </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
