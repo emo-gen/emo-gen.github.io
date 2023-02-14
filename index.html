@@ -220,18 +220,18 @@
             <source src="./audio/CS/0/25.mp3" autoplay="">Your browser does not support the audio element.
             </audio> <br>
             <audio controls="controls">
-            <source src="./audio/CS/0/27.mp3" autoplay="">Your browser does not support the audio element.
+            <source src="./audio/CS/0/43.mp3" autoplay="">Your browser does not support the audio element.
             </audio> 
          </td>
          <td style="text-align:left;">
-         	The tempo of these music pieces is fast. The second and the third pieces sound bright. Therefore, the second and third pieces belong to Q1. But the first piece sound relatively tense, which belongs to the boundary of Q1 and Q2.
+         The tempo of the first and second pieces is fast. The second piece sounds bright thus belongs to Q1. The first piece sounds relatively tense, which belongs to the boundary of Q1 and Q2. The third piece sounds slow and bright, thus it belongs to the boundary of Q1 and Q4.
          </td>
       </tr>
       <tr>
          <td>Q2</td>
          <td> 
          	<audio controls="controls">
-              <source src="./audio/CS/1/114.mp3" autoplay="">Your browser does not support the audio element.
+              <source src="./audio/CS/1/10.mp3" autoplay="">Your browser does not support the audio element.
               </audio>
               <audio controls="controls">
               <source src="./audio/CS/1/189.mp3" autoplay="">Your browser does not support the audio element.
@@ -241,7 +241,7 @@
               </audio>
          </td>
          <td><p style="text-align:left;">
-         The tempo of these music pieces is relatively fast. The first and third pieces belong to Q2, and the second piece is relatively bright, which belongs to the boundary of Q1 and Q2. </p>
+         The tempo of the first piece is slow and the first piece sounds relative calm, thus it belong to the boundary of Q3 and Q4. The second and the third pieces are fast and the second piece is relatively bright, which belongs to the boundary of Q1 and Q2. The third piece sounds relatively tense thus it belongs to Q2. </p>
          </td>
       </tr>
       <tr>
@@ -352,23 +352,23 @@
 
 
 ​      
-      <tr>
-         <td rowspan="4">EmoGen (Setting 2)</td>
-         <td style="text-indent:-30px;">Q1</td>
-         <td>
-         	<audio controls="controls">
-              <source src="./audio/Piano/0/21.mp3" autoplay="">Your browser does not support the audio element.
-              </audio> <br>
-              <audio controls="controls">
-              <source src="./audio/Piano/0/29.mp3" autoplay="">Your browser does not support the audio element.
-              </audio> <br>
-              <audio controls="controls">
-              <source src="./audio/Piano/0/50.mp3" autoplay="">Your browser does not support the audio element.
-              </audio>
-         </td>
-         <td style="text-align:left;">
-         These music pieces sound bright and relatively fast. Therefore they belong to Q1.
-         
+​      <tr>
+​         <td rowspan="4">EmoGen (Setting 2)</td>
+​         <td style="text-indent:-30px;">Q1</td>
+​         <td>
+​         	<audio controls="controls">
+​              <source src="./audio/Piano/0/21.mp3" autoplay="">Your browser does not support the audio element.
+​              </audio> <br>
+​              <audio controls="controls">
+​              <source src="./audio/Piano/0/29.mp3" autoplay="">Your browser does not support the audio element.
+​              </audio> <br>
+​              <audio controls="controls">
+​              <source src="./audio/Piano/0/50.mp3" autoplay="">Your browser does not support the audio element.
+​              </audio>
+​         </td>
+​         <td style="text-align:left;">
+​         These music pieces sound bright and relatively fast. Therefore they belong to Q1.
+​         
        </td>
       </tr>
       <tr>
@@ -430,7 +430,17 @@
         <col>
       </colgroup>
     </table>
-From these samples, we can see that: CS and PUCT will generate samples with vague emotion, resulting in a lower proportion of correct samples and lower control accuracy. In contrast, EmoGen generates samples with more explicit emotion. Therefore, the emotional control accuracy of EmoGen is higher. Besides,  the music quality of EmoGen's samples is also higher than that of CS and PUCT (please refer to Subsection 4.2 in the paper for details). In conclusion, EmoGen outperforms CS and PUCT on emotional control accuracy and music quality.
+From these samples, we can see that: <br>
+
+<ol>
+    <li> Given an emotion quadrant as the target, although CS and PUCT can generate samples in the corresponding quadrant, they also generate samples with vague emotion (even in other emotional quadrants). Therefore, the proportion of  correct samples for CS and PUCT is low. </li>
+
+    <li>In contrast, EmoGen generates samples with more explicit emotion and the proportion of correct samples is higher. Therefore, the emotional control accuracy of EmoGen is higher. </li>
+    
+    <li> Besides,  subjective evaluation results show that the music quality of EmoGen's samples is also higher than that of CS and PUCT (please refer to Subsection 4.2 in the paper for details). </li>
+</ol>
+
+In conclusion, EmoGen outperforms CS and PUCT on emotional control accuracy and music quality.
 
 <style>
   table,
